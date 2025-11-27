@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Anti-scroll",
+    "version": "1.0",
+    "description": "Removes scrolling from YouTube shorts.",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+            {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["contentScript.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
